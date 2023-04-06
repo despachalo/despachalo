@@ -1,0 +1,17 @@
+
+spring:
+  r2dbc:
+    name: despachalo_dev
+    username: despachalo_dev
+    password: despachalo_dev
+    url: r2dbc:postgresql://127.0.0.1:5432/despachalo_dev
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/changelog.yml
+    url: jdbc:postgresql://127.0.0.1:5432/despachalo_dev
+    user: despachalo_dev
+    password: despachalo_dev
+
+springdoc:
+  show-actuator: true

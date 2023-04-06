@@ -9,7 +9,7 @@ import reactor.core.publisher.Mono;
 
 @Component
 @RequiredArgsConstructor
-public class RegisterCompanyPersistence implements RegisterCompanyPort {
+public class RegisterCompanyPersistenceAdapter implements RegisterCompanyPort {
   private final CompanyReactiveRepository companyReactiveRepository;
   private final CompanyMapper companyMapper;
 

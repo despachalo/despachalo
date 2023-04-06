@@ -8,7 +8,7 @@ import reactor.core.publisher.Flux;
 
 @Component
 @RequiredArgsConstructor
-public class GetAllCompaniesPersistence implements GetAllCompaniesPort {
+public class GetAllCompaniesPersistenceAdapter implements GetAllCompaniesPort {
   private final CompanyReactiveRepository companyReactiveRepository;
   private final CompanyMapper companyMapper;
 

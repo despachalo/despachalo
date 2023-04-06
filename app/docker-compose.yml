@@ -2,15 +2,15 @@ version:  '3.9'
 
 services:
   db:
-    image: postgres
+    image: postgres:15.2-alpine
     ports:
       - "5432:5432"
     volumes:
       - "postgres-db-data:/var/lib/postgresql/data"
     environment:
-      POSTGRES_DB: dev_despachalo
-      POSTGRES_USER: dev_despachalo
-      POSTGRES_PASSWORD: dev_despachalo
+      POSTGRES_DB: despachalo_dev
+      POSTGRES_USER: despachalo_dev
+      POSTGRES_PASSWORD: despachalo_dev
 
 volumes:
   postgres-db-data:

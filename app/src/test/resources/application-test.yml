@@ -1,0 +1,21 @@
+spring:
+  output:
+    ansi:
+      enabled: always
+
+  r2dbc:
+    name: value_set_during_runtime
+    username: value_set_during_runtime
+    password: value_set_during_runtime
+    url: value_set_during_runtime
+
+  liquibase:
+    enabled: true
+    change-log: classpath:db/changelog/changelog.yml
+    user: value_set_during_runtime
+    password: value_set_during_runtime
+    url: value_set_during_runtime
+
+
+springdoc:
+  show-actuator: false
