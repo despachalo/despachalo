@@ -2,6 +2,7 @@ package pe.despachalo.app.company.adapters.web;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
@@ -16,8 +17,8 @@ import reactor.core.publisher.Flux;
 public class GetAllCompaniesController {
   private final GetAllCompaniesService getAllCompaniesService;
 
-  @GetMapping
   @ResponseStatus(HttpStatus.OK)
+  @GetMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
   Flux<Company> getAllCompanies() {
     return getAllCompaniesService.execute();
   }
