@@ -5,6 +5,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.data.r2dbc.DataR2dbcTest;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import pe.despachalo.app.company.CompanyToRegister;
@@ -27,6 +28,7 @@ class RegisterCompanyPersistenceAdapterTest {
   private CompanyReactiveRepository companyReactiveRepository;
 
   @Test
+  @DirtiesContext
   void registerACompanyInDB() {
     var companyToRegister = new CompanyToRegister("A&J Corp", "12332112332");
 

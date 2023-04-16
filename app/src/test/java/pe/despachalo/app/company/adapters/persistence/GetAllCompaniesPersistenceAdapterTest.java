@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.autoconfigure.data.r2dbc.DataR2dbcTest;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.io.Resource;
+import org.springframework.test.annotation.DirtiesContext;
 import org.springframework.test.context.ActiveProfiles;
 import org.testcontainers.junit.jupiter.Testcontainers;
 import pe.despachalo.app.company.Company;
@@ -45,6 +46,7 @@ class GetAllCompaniesPersistenceAdapterTest {
   }
 
   @Test
+  @DirtiesContext
   void getAllCompaniesFromDB() {
     var rucs = List.of("12345678901", "12345678902");
     var companies = getAllCompaniesPersistenceAdapter.getAll().collectList();
