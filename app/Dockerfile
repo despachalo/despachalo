@@ -1,5 +1,5 @@
 # BUILD JAR
-FROM openjdk:17-jdk-slim as builder
+FROM eclipse-temurin:17-jdk-jammy as builder
 
 WORKDIR /app/builder/
 
@@ -7,9 +7,12 @@ COPY . .
 
 RUN ./gradlew assemble
 
-FROM openjdk:17-jdk-slim as release
+FROM eclipse-temurin:17-jre-jammy as release
 
 WORKDIR /app
+
+RUN addgroup runner; adduser  --ingroup runner --disabled-password runner
+USER runner
 
 COPY --from=builder /app/builder/build/libs/*.jar app.jar
 
