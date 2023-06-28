@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: 01-create-distribution-center-table
+      author: jguzman
+      changes:
+        - createTable:
+            tableName: distribution_center
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: distribution_center_id_pk
+              - column:
+                  name: name
+                  type: varchar(200)
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: distribution_center_name_nn
+              - column:
+                  name: address
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+                    notNullConstraintName: distribution_center_address_nn
+              - column:
+                  name: geo_coord_longitude
+                  type: double
+              - column:
+                  name: geo_coord_latitude
+                  type: double

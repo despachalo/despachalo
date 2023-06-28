@@ -1,0 +1,8 @@
+{
+  "name": "Lima Center",
+  "address": "Av Panama, Lima",
+  "location": {
+    "longitude": 123456.54,
+    "latitude": -12345.32
+  }
+}
