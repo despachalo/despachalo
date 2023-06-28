@@ -13,7 +13,7 @@ import reactor.core.publisher.Mono;
 
 @WebAdapter
 @RestController
-@RequestMapping(value = "distribution-center")
+@RequestMapping(value = "distribution-centers")
 @RequiredArgsConstructor
 public class RegisterDistributionCenterController {
   private final RegisterDistributionCenterService registerDistributionCenterService;

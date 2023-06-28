@@ -15,12 +15,10 @@ public interface DistributionCenterMapper {
   @Mapping(target = "location.longitude", source = "longitude")
   DistributionCenter toDistributionCenter(DistributionCenterModel model);
 
-  @Mapping(target = "id", source = "id")
+  @Mapping(target = "id", ignore = true)
   @Mapping(target = "name", source = "name")
   @Mapping(target = "address", source = "address")
   @Mapping(target = "longitude", source = "location.longitude")
   @Mapping(target = "latitude", source = "location.latitude")
-  @Mapping(target = "createdAt", ignore = true)
-  @Mapping(target = "updatedAt", ignore = true)
   DistributionCenterModel toDistributionCenterModel(DistributionCenterToRegister toRegister);
 }

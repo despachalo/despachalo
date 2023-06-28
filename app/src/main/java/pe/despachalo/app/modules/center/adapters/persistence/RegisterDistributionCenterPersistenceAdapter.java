@@ -12,8 +12,8 @@ import reactor.core.publisher.Mono;
 @PersistenceAdapter
 @RequiredArgsConstructor
 public class RegisterDistributionCenterPersistenceAdapter implements RegisterDistributionCenterPort {
-  private DistributionCenterReactiveRepository distributionCenterReactiveRepository;
-  private DistributionCenterMapper distributionCenterMapper;
+  private final DistributionCenterReactiveRepository distributionCenterReactiveRepository;
+  private final DistributionCenterMapper distributionCenterMapper;
 
   @Override
   public Mono<DistributionCenter> register(DistributionCenterToRegister toRegister) {

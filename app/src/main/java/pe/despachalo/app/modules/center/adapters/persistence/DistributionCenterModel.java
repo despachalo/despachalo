@@ -7,8 +7,6 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
 
-import java.time.LocalDateTime;
-
 @Getter
 @Setter
 @Table("distribution_center")
@@ -23,15 +21,9 @@ public class DistributionCenterModel {
   @Column("address")
   private String address;
 
-  @Column("longitude")
+  @Column("geo_coord_longitude")
   private Double longitude;
 
-  @Column("latitude")
+  @Column("geo_coord_latitude")
   private Double latitude;
-
-  @Column("created_at")
-  private LocalDateTime createdAt;
-
-  @Column("updated_at")
-  private LocalDateTime updatedAt;
 }
