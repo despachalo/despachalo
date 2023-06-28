@@ -7,10 +7,12 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseStatus;
 import org.springframework.web.bind.annotation.RestController;
+import pe.despachalo.app.modules.common.hexagonal.WebAdapter;
 import pe.despachalo.app.modules.company.Company;
 import pe.despachalo.app.modules.company.GetAllCompaniesService;
 import reactor.core.publisher.Flux;
 
+@WebAdapter
 @RestController
 @RequestMapping(value = "companies")
 @RequiredArgsConstructor

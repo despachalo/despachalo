@@ -2,12 +2,12 @@ package pe.despachalo.app.modules.company;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
+import pe.despachalo.app.modules.common.hexagonal.UseCase;
 import pe.despachalo.app.modules.company.ports.GetAllCompaniesPort;
 import reactor.core.publisher.Flux;
 
 @Slf4j
-@Service
+@UseCase
 @RequiredArgsConstructor
 public class GetAllCompaniesUseCase implements GetAllCompaniesService {
   private final GetAllCompaniesPort getAllCompaniesPort;

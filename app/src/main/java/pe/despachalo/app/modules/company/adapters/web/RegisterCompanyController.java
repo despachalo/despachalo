@@ -5,11 +5,13 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+import pe.despachalo.app.modules.common.hexagonal.WebAdapter;
 import pe.despachalo.app.modules.company.Company;
 import pe.despachalo.app.modules.company.CompanyToRegister;
 import pe.despachalo.app.modules.company.RegisterNewCompanyService;
 import reactor.core.publisher.Mono;
 
+@WebAdapter
 @RestController
 @RequestMapping(value = "companies")
 @RequiredArgsConstructor

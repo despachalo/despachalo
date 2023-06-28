@@ -1,13 +1,13 @@
 package pe.despachalo.app.modules.company.adapters.persistence;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.stereotype.Component;
+import pe.despachalo.app.modules.common.hexagonal.PersistenceAdapter;
 import pe.despachalo.app.modules.company.Company;
 import pe.despachalo.app.modules.company.CompanyToRegister;
 import pe.despachalo.app.modules.company.ports.RegisterCompanyPort;
 import reactor.core.publisher.Mono;
 
-@Component
+@PersistenceAdapter
 @RequiredArgsConstructor
 public class RegisterCompanyPersistenceAdapter implements RegisterCompanyPort {
   private final CompanyReactiveRepository companyReactiveRepository;
