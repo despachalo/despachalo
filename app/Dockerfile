@@ -1,13 +1,13 @@
 # BUILD JAR
-FROM eclipse-temurin:17-jdk-jammy as builder
+FROM eclipse-temurin:17-jdk-jammy AS builder
 
 WORKDIR /app/builder/
 
 COPY . .
 
-RUN ./gradlew assemble
+RUN ./gradlew bootJar
 
-FROM eclipse-temurin:17-jre-jammy as release
+FROM eclipse-temurin:17-jre-jammy AS release
 
 WORKDIR /app
 
