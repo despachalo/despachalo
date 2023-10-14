@@ -1,0 +1,15 @@
+application:
+  permissions:
+    programming:
+      id: PROG
+      description: programación de despachos
+      actions:
+      - id: ${application.permissions.programming.id}-001
+        description: programar despachos
+
+    users:
+      id: USER
+      description: administración de usuarios
+      actions:
+      - id: ${application.permissions.users.id}-001
+        description: registrar nuevos usuarios
