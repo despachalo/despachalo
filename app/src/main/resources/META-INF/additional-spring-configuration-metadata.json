@@ -1,0 +1,14 @@
+{
+  "properties": [
+    {
+      "name": "application.title",
+      "type": "java.lang.String",
+      "description": "Name of the spring boot application."
+    },
+    {
+      "name": "application.version",
+      "type": "java.lang.String",
+      "description": "Version of the spring boot application."
+    }
+  ]
+}
