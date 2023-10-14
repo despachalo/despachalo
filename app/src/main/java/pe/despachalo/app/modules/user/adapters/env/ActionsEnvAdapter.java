@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import pe.despachalo.app.modules.common.hexagonal.EnvAdapter;
 import pe.despachalo.app.modules.user.domain.ModuleWithActions;
 import pe.despachalo.app.modules.user.ports.GetAllActionsAllowedByModulePort;
-import pe.despachalo.app.modules.user.ports.ValidActionIdPort;
+import pe.despachalo.app.modules.user.ports.ValidateActionIdPort;
 import reactor.core.publisher.Flux;
 
 import java.util.Collection;
@@ -15,7 +15,7 @@ import java.util.Collection;
 @EnvAdapter
 @RequiredArgsConstructor
 public class ActionsEnvAdapter implements
-    ValidActionIdPort,
+    ValidateActionIdPort,
     GetAllActionsAllowedByModulePort {
 
   private final PermissionProps permissionProps;
