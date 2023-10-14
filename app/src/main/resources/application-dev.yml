@@ -13,5 +13,10 @@ spring:
     user: despachalo_dev
     password: despachalo_dev
 
+  docker:
+    compose:
+      enabled: true
+      file: ./app/docker-compose.dev.yml
+
 springdoc:
   show-actuator: true
