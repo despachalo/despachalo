@@ -22,7 +22,7 @@ public class ActionsEnvAdapter implements
   private final ModulesMapper modulesMapper;
 
   @Override
-  public boolean valid(String actionId) {
+  public boolean validate(String actionId) {
     return permissionProps.allModules()
         .stream()
         .map(PermissionProps.Module::getActions)

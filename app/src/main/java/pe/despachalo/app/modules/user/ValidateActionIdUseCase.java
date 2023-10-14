@@ -13,6 +13,6 @@ public class ValidateActionIdUseCase implements ValidateActionIdService {
 
   @Override
   public boolean execute(String actionId) {
-    return validateActionIdPort.valid(actionId);
+    return validateActionIdPort.validate(actionId);
   }
 }
